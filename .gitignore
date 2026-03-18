@@ -9,6 +9,8 @@ Thumbs.db
 .idea/
 
 # Arquivos de cache do Power BI
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
 *.pbix
 *.pbit
 
