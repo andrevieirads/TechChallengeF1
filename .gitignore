@@ -24,12 +24,6 @@ Thumbs.db
 # Local settings
 .localSettings.json
 
-# OS files
-Thumbs.db
-
-# Editor
-.vscode/
-
 # Arquivos locais de credenciais
 *.credential
 *.credentials
