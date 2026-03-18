@@ -95,6 +95,18 @@ table olist_orders_dataset
 
 		annotation SummarizationSetBy = Automatic
 
+	measure 'Total Orders' = DISTINCTCOUNT(olist_orders_dataset[order_id])
+		formatString: 0
+		lineageTag: c5df6dfd-290f-4f6c-bde3-d1fbe9af9f70
+
+	measure 'Avg Delivery Days' = AVERAGEX(olist_orders_dataset, DATEDIFF(olist_orders_dataset[order_purchase_timestamp], olist_orders_dataset[order_delivered_customer_date], DAY))
+		formatString: 0.0
+		lineageTag: fe2af29c-9c84-498c-bb07-fbe936bc4021
+
+	measure 'On-Time Delivery %' = DIVIDE(CALCULATE([Total Orders], olist_orders_dataset[order_delivered_customer_date] <= olist_orders_dataset[order_estimated_delivery_date]), [Total Orders])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6fd2dd5a-e7c7-4d90-863a-bbcefa0ac499
+
 	partition olist_orders_dataset = m
 		mode: import
 		source =

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "f253e9f14b8c44ed92c2",
+  "position": {
+    "x": 20,
+    "y": 440,
+    "z": 2000,
+    "width": 500,
+    "height": 250
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LocalDateTable_8ba65c18-652d-4b6b-a7bb-e62f1ef6dbb3"
+                    }
+                  },
+                  "Property": "Mês"
+                }
+              },
+              "queryRef": "LocalDateTable_8ba65c18-652d-4b6b-a7bb-e62f1ef6dbb3.Mês"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "olist_orders_dataset"
+                    }
+                  },
+                  "Property": "Total Orders"
+                }
+              },
+              "queryRef": "olist_orders_dataset.Total Orders"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total de Pedidos por Mês'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -70,6 +70,14 @@ table olist_order_reviews_dataset
 
 		annotation SummarizationSetBy = Automatic
 
+	measure 'Average Review Score' = AVERAGE(olist_order_reviews_dataset[review_score])
+		formatString: 0.0
+		lineageTag: da3bd0bb-01c5-40cc-ba2f-f4c2c52eb6b9
+
+	measure '% 5-Star Reviews' = DIVIDE(CALCULATE(COUNTROWS(olist_order_reviews_dataset), olist_order_reviews_dataset[review_score] = 5), COUNTROWS(olist_order_reviews_dataset))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f52d67da-ad6e-44b8-acfe-0038cbac7f10
+
 	partition olist_order_reviews_dataset = m
 		mode: import
 		source =

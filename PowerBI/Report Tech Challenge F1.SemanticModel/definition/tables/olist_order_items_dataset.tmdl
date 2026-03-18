@@ -67,6 +67,16 @@ table olist_order_items_dataset
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total Revenue' = SUM(olist_order_items_dataset[price]) + SUM(olist_order_items_dataset[freight_value])
+		formatString: "R$ "\#,0.00;-"R$ "\#,0.00;"R$ "\#,0.00
+		lineageTag: b60a7ad1-77b3-4f9d-8c10-e59891c95b66
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Total Items Sold' = COUNTROWS(olist_order_items_dataset)
+		formatString: 0
+		lineageTag: cb9d95f8-b3d6-44b4-afbd-b1d1d81f21eb
+
 	partition olist_order_items_dataset = m
 		mode: import
 		source =

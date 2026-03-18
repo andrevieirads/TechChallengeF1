@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "a5703c964ee948a298e0",
+  "position": {
+    "x": 20,
+    "y": 120,
+    "z": 2000,
+    "width": 500,
+    "height": 300
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LocalDateTable_8ba65c18-652d-4b6b-a7bb-e62f1ef6dbb3"
+                    }
+                  },
+                  "Property": "Mês"
+                }
+              },
+              "queryRef": "LocalDateTable_8ba65c18-652d-4b6b-a7bb-e62f1ef6dbb3.Mês"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "olist_order_items_dataset"
+                    }
+                  },
+                  "Property": "Total Revenue"
+                }
+              },
+              "queryRef": "olist_order_items_dataset.Total Revenue"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Receita por Mês'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
