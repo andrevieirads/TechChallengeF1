@@ -155,17 +155,17 @@ O projeto segue as etapas:
 
 ```
 .
-├── data
+├── Data
 │   ├── raw
 │   └── processed
 │
-├── notebooks
+├── Notebooks
 │   └── analise_exploratoria.ipynb
 │
 ├── PowerBI
 │   └── dashboard_powerbi.pbix
 │
-├── docs
+├── Doc
 │   └── apresentacao.pdf
 │
 └── README.md
