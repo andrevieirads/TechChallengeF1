@@ -2,18 +2,20 @@
 *.DS_Store
 
 # Windons
-
+Thumbs.db
 
 # Configuração de IDE
 .vscode/
 .idea/
 
-# Power BI files
+# Arquivos de cache do Power BI
 *.pbix
 *.pbit
 
-# Cache / temp
+# Cache e arquivos temporários
 *.tmp
+*.temp
+*.bak
 *.log
 *.cache
 
@@ -26,3 +28,6 @@ Thumbs.db
 # Editor
 .vscode/
 
+# Arquivos locais de credenciais
+*.credential
+*.credentials
