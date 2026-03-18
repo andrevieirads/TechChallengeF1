@@ -6,6 +6,7 @@ Grupo:
 
 - André Vieira de Souza - RM370784
 - Marcelo Henrique Mourão Abbade - RM373613
+- Livia Alves de Oliveira - RM370348
 
 ## Introdução
 
@@ -152,6 +153,7 @@ O projeto segue as etapas:
 
 ## 📂 Estrutura do Repositório
 
+```
 .
 ├── data
 │   ├── raw
@@ -167,6 +169,7 @@ O projeto segue as etapas:
 │   └── apresentacao.pdf
 │
 └── README.md
+```
 
 ## 📊 Resultados Esperados
 
