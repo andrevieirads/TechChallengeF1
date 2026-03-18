@@ -10,5 +10,26 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["Pasta","olist_orders_dataset","olist_order_items_dataset","olist_customers_dataset","olist_geolocation_dataset","olist_order_payments_dataset","olist_order_reviews_dataset","olist_products_dataset","olist_sellers_dataset","product_category_name_translation"]
+
+ref table olist_orders_dataset
+ref table DateTableTemplate_02e08216-fc23-40db-9aea-4ba9ce79f5bc
+ref table LocalDateTable_8ba65c18-652d-4b6b-a7bb-e62f1ef6dbb3
+ref table LocalDateTable_b1cf5133-7caa-47ae-9781-640d5319f462
+ref table LocalDateTable_1503276f-75f2-48f7-8ff1-f2818c5687f6
+ref table LocalDateTable_3d84185b-c255-48e7-ab3b-f9b01f21dfc3
+ref table LocalDateTable_ebf4f305-f516-43b7-ac85-2cb74a0b1221
+ref table olist_products_dataset
+ref table product_category_name_translation
+ref table olist_sellers_dataset
+ref table olist_order_items_dataset
+ref table LocalDateTable_09ee2b65-b8ed-4056-aefb-af117d9c1ecb
+ref table olist_customers_dataset
+ref table olist_order_payments_dataset
+ref table olist_order_reviews_dataset
+ref table LocalDateTable_164bc7b6-adb5-4989-a7ca-8313f5141cfd
+ref table LocalDateTable_14c414e7-40e0-423e-ba68-98be87b0344c
+ref table olist_geolocation_dataset
+
 ref cultureInfo pt-BR
 
