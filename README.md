@@ -1,4 +1,4 @@
-# TechChallengeF1 Análise de E-commerce
+# TechChallengeF1 - Análise de E-commerce
 
 ## Membros / Autores
 
