@@ -7,7 +7,125 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 2222.3616394153596,
+            "y": 25
+          },
+          "nodeIndex": "olist_orders_dataset",
+          "nodeLineageTag": "b8a6e904-4062-4e90-b66d-74f001446065",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852.36163941535983,
+            "y": 49
+          },
+          "nodeIndex": "olist_customers_dataset",
+          "nodeLineageTag": "8ddddfb5-b283-4da0-87d2-acbeedb65855",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136.3616394153598,
+            "y": 49
+          },
+          "nodeIndex": "olist_geolocation_dataset",
+          "nodeLineageTag": "6fc5815b-4167-4158-aa5d-037948e6677c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.1847511806298,
+            "y": -38.3249926324353
+          },
+          "nodeIndex": "olist_order_items_dataset",
+          "nodeLineageTag": "d39d0a77-e3ac-465b-abf6-3326bf0a9a88",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420.3616394153598,
+            "y": 49
+          },
+          "nodeIndex": "olist_order_payments_dataset",
+          "nodeLineageTag": "d91cf528-0734-4519-bdf9-2d60f9d88ca4",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704.3616394153598,
+            "y": 25
+          },
+          "nodeIndex": "olist_order_reviews_dataset",
+          "nodeLineageTag": "aaccd124-443f-48a7-8dc4-70cb36fe0940",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.36163941535983,
+            "y": -49
+          },
+          "nodeIndex": "olist_products_dataset",
+          "nodeLineageTag": "a744fb8c-d44b-4045-9c6b-1a9681523432",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": -21.259883455093359
+          },
+          "nodeIndex": "olist_sellers_dataset",
+          "nodeLineageTag": "87b94c81-e3db-458a-ad5c-e68ca1fc5990",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988.3616394153598,
+            "y": 85
+          },
+          "nodeIndex": "product_category_name_translation",
+          "nodeLineageTag": "8b0afe09-fbb0-40c1-8b0a-ebe5952e9146",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
       "name": "Todas as tabelas",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
