@@ -1,0 +1,256 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "eefb8d704c2517c5d760",
+  "position": {
+    "x": 277,
+    "y": 150,
+    "z": 0,
+    "height": 377,
+    "width": 488,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "olist_order_reviews_dataset"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "review_answer_timestamp"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Ano"
+                }
+              },
+              "queryRef": "olist_order_reviews_dataset.review_answer_timestamp.Variation.Hierarquia de datas.Ano",
+              "nativeQueryRef": "review_answer_timestamp Ano"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "olist_order_reviews_dataset"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "review_answer_timestamp"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "olist_order_reviews_dataset.review_answer_timestamp.Variation.Hierarquia de datas.Trimestre",
+              "nativeQueryRef": "review_answer_timestamp Trimestre"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "olist_order_reviews_dataset"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "review_answer_timestamp"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Mês"
+                }
+              },
+              "queryRef": "olist_order_reviews_dataset.review_answer_timestamp.Variation.Hierarquia de datas.Mês",
+              "nativeQueryRef": "review_answer_timestamp Mês"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "olist_order_reviews_dataset"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "review_answer_timestamp"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Dia"
+                }
+              },
+              "queryRef": "olist_order_reviews_dataset.review_answer_timestamp.Variation.Hierarquia de datas.Dia",
+              "nativeQueryRef": "review_answer_timestamp Dia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "olist_order_reviews_dataset"
+                    }
+                  },
+                  "Property": "order_id"
+                }
+              },
+              "queryRef": "olist_order_reviews_dataset.order_id",
+              "nativeQueryRef": "order_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "28597914c467a081e0a5",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "olist_order_reviews_dataset"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "review_answer_timestamp"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "267603b55843a2bb3831",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "olist_order_reviews_dataset"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "review_answer_timestamp"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Trimestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6422e03b39c974a050b0",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "olist_order_reviews_dataset"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "review_answer_timestamp"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Mês"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "da025536005e6884329a",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "olist_order_reviews_dataset"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "review_answer_timestamp"
+                  }
+                },
+                "Hierarchy": "Hierarquia de datas"
+              }
+            },
+            "Level": "Dia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8f0566d019e2705b8c01",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "olist_order_reviews_dataset"
+              }
+            },
+            "Property": "order_id"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
