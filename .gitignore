@@ -1,0 +1,28 @@
+# Mac
+*.DS_Store
+
+# Windons
+
+
+# Configuração de IDE
+.vscode/
+.idea/
+
+# Power BI files
+*.pbix
+*.pbit
+
+# Cache / temp
+*.tmp
+*.log
+*.cache
+
+# Local settings
+.localSettings.json
+
+# OS files
+Thumbs.db
+
+# Editor
+.vscode/
+
