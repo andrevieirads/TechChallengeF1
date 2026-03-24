@@ -4,9 +4,11 @@
 
 Grupo:
 
-- André Vieira de Souza - RM370784
-- Marcelo Henrique Mourão Abbade - RM373613
-- Livia Alves de Oliveira - RM370348
+André Vieira de Souza - RM370784
+Emanoel Dlugokenski - RM371337
+Livia Alves de Oliveira - RM370348
+Luís Felipe Soares - RM372528
+Marcelo Henrique Mourão Abbade - RM373613
 
 ## Introdução
 
