@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 852.36163941535983,
-            "y": 49
+            "x": 854.36163941535983,
+            "y": 0
           },
           "nodeIndex": "olist_customers_dataset",
           "nodeLineageTag": "8ddddfb5-b283-4da0-87d2-acbeedb65855",
@@ -36,21 +36,21 @@
         },
         {
           "location": {
-            "x": 1136.3616394153598,
-            "y": 49
+            "x": 1087.3616394153598,
+            "y": 435
           },
           "nodeIndex": "olist_geolocation_dataset",
           "nodeLineageTag": "6fc5815b-4167-4158-aa5d-037948e6677c",
           "size": {
-            "height": 200,
+            "height": 361,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 334.1847511806298,
-            "y": -38.3249926324353
+            "x": 303.1847511806298,
+            "y": 0
           },
           "nodeIndex": "olist_order_items_dataset",
           "nodeLineageTag": "d39d0a77-e3ac-465b-abf6-3326bf0a9a88",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 1420.3616394153598,
-            "y": 49
+            "x": 1511.3616394153598,
+            "y": 588
           },
           "nodeIndex": "olist_order_payments_dataset",
           "nodeLineageTag": "d91cf528-0734-4519-bdf9-2d60f9d88ca4",
@@ -75,8 +75,8 @@
         },
         {
           "location": {
-            "x": 1704.3616394153598,
-            "y": 25
+            "x": 1536.3616394153598,
+            "y": 0
           },
           "nodeIndex": "olist_order_reviews_dataset",
           "nodeLineageTag": "aaccd124-443f-48a7-8dc4-70cb36fe0940",
@@ -88,8 +88,8 @@
         },
         {
           "location": {
-            "x": 618.36163941535983,
-            "y": -49
+            "x": 589.36163941535983,
+            "y": 546
           },
           "nodeIndex": "olist_products_dataset",
           "nodeLineageTag": "a744fb8c-d44b-4045-9c6b-1a9681523432",
@@ -101,8 +101,8 @@
         },
         {
           "location": {
-            "x": 50,
-            "y": -21.259883455093359
+            "x": 0,
+            "y": 18
           },
           "nodeIndex": "olist_sellers_dataset",
           "nodeLineageTag": "87b94c81-e3db-458a-ad5c-e68ca1fc5990",
@@ -114,8 +114,8 @@
         },
         {
           "location": {
-            "x": 1988.3616394153598,
-            "y": 85
+            "x": 1856.3616394153598,
+            "y": 444
           },
           "nodeIndex": "product_category_name_translation",
           "nodeLineageTag": "8b0afe09-fbb0-40c1-8b0a-ebe5952e9146",
