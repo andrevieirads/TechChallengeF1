@@ -95,15 +95,113 @@ table olist_orders_dataset
 
 		annotation SummarizationSetBy = Automatic
 
+	column Ano_Mes
+		dataType: string
+		lineageTag: 347832f3-ccfc-490c-b13c-7995401be206
+		summarizeBy: none
+		sourceColumn: Ano_Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano_Mes_Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2e297f9e-abfc-4568-a68d-6aafbbfb8e87
+		summarizeBy: none
+		sourceColumn: Ano_Mes_Data
+
+		variation Variation
+			isDefault
+			relationship: cfc492bc-ccaf-4a5d-b8f7-2fff7b39b2a1
+			defaultHierarchy: LocalDateTable_184d5616-43a2-4467-b988-31450a74264e.'Hierarquia de datas'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Lead_Time_Dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c582168-1999-442f-bfa2-cdc882ac5571
+		summarizeBy: sum
+		sourceColumn: Lead_Time_Dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atrasado
+		dataType: string
+		lineageTag: a88fcaca-083f-49f9-842c-2246d16b02da
+		summarizeBy: none
+		sourceColumn: Atrasado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dias_Atraso
+		dataType: int64
+		formatString: 0
+		lineageTag: 98148183-173e-4b5d-b6f4-508d0a80b552
+		summarizeBy: sum
+		sourceColumn: Dias_Atraso
+
+		annotation SummarizationSetBy = Automatic
+
 	partition olist_orders_dataset = m
 		mode: import
-		source =
+		source = ```
 				let
-				    Fonte = Csv.Document(File.Contents(Pasta&"olist_orders_dataset.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Fonte = Csv.Document(
+				        File.Contents(Pasta & "olist_orders_dataset.csv"),
+				        [Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]
+				    ),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"order_id", type text}, {"customer_id", type text}, {"order_status", type text}, {"order_purchase_timestamp", type datetime}, {"order_approved_at", type datetime}, {"order_delivered_carrier_date", type datetime}, {"order_delivered_customer_date", type datetime}, {"order_estimated_delivery_date", type datetime}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{
+				        {"order_id", type text}, 
+				        {"customer_id", type text}, 
+				        {"order_status", type text}, 
+				        {"order_purchase_timestamp", type datetime}, 
+				        {"order_approved_at", type datetime}, 
+				        {"order_delivered_carrier_date", type datetime}, 
+				        {"order_delivered_customer_date", type datetime}, 
+				        {"order_estimated_delivery_date", type datetime}
+				    }),
+				    #"Filtro Delivered" = Table.SelectRows(#"Tipo Alterado", each [order_status] = "delivered"),
+				    #"Filtro Periodo" = Table.SelectRows(#"Filtro Delivered", each 
+				        [order_purchase_timestamp] >= #datetime(2017, 1, 1, 0, 0, 0) and 
+				        [order_purchase_timestamp] <= #datetime(2018, 8, 31, 23, 59, 59)
+				    ),
+				    #"Add Ano_Mes" = Table.AddColumn(#"Filtro Periodo", "Ano_Mes", each 
+				        Date.ToText(DateTime.Date([order_purchase_timestamp]), "yyyy-MM"), 
+				        type text
+				    ),
+				    #"Add Ano_Mes_Data" = Table.AddColumn(#"Add Ano_Mes", "Ano_Mes_Data", each 
+				        Date.StartOfMonth(DateTime.Date([order_purchase_timestamp])), 
+				        type date
+				    ),
+				    #"Add Lead_Time" = Table.AddColumn(#"Add Ano_Mes_Data", "Lead_Time_Dias", each 
+				        if [order_delivered_customer_date] <> null 
+				        then Duration.Days([order_delivered_customer_date] - [order_purchase_timestamp]) 
+				        else null, 
+				        Int64.Type
+				    ),
+				    #"Add Atrasado" = Table.AddColumn(#"Add Lead_Time", "Atrasado", each 
+				        if [order_delivered_customer_date] <> null and [order_estimated_delivery_date] <> null 
+				        then (if [order_delivered_customer_date] > [order_estimated_delivery_date] 
+				              then "Atrasado" 
+				              else "No Prazo") 
+				        else null, 
+				        type text
+				    ),
+				    #"Add Dias_Atraso" = Table.AddColumn(#"Add Atrasado", "Dias_Atraso", each 
+				        if [order_delivered_customer_date] <> null and [order_estimated_delivery_date] <> null 
+				        then Duration.Days([order_delivered_customer_date] - [order_estimated_delivery_date]) 
+				        else null, 
+				        Int64.Type
+				    )
 				in
-				    #"Tipo Alterado"
+				    #"Add Dias_Atraso"
+				```
 
 	annotation PBI_NavigationStepName = Navegação
 

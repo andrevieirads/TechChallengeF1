@@ -70,15 +70,37 @@ table olist_order_reviews_dataset
 
 		annotation SummarizationSetBy = Automatic
 
+	column Faixa_Satisfacao
+		dataType: string
+		lineageTag: a8a5d0e8-02b3-4c0f-ab4f-a76f5c10dea9
+		summarizeBy: none
+		sourceColumn: Faixa_Satisfacao
+
+		annotation SummarizationSetBy = Automatic
+
 	partition olist_order_reviews_dataset = m
 		mode: import
-		source =
+		source = ```
 				let
 				    Fonte = Csv.Document(File.Contents(Pasta&"olist_order_reviews_dataset.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"review_id", type text}, {"order_id", type text}, {"review_score", Int64.Type}, {"review_comment_title", type text}, {"review_comment_message", type text}, {"review_creation_date", type datetime}, {"review_answer_timestamp", type datetime}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"review_id", type text}, {"order_id", type text}, {"review_score", Int64.Type}, {"review_comment_title", type text}, {"review_comment_message", type text}, {"review_creation_date", type datetime}, {"review_answer_timestamp", type datetime}}),
+				
+				    // === COLUNA: Faixa_Satisfacao ===
+				    #"Add Faixa" = Table.AddColumn(#"Tipo Alterado", "Faixa_Satisfacao", each 
+				        if [review_score] >= 4 then "Satisfeito"
+				        else if [review_score] = 3 then "Neutro"
+				        else "Insatisfeito", 
+				        type text
+				    ),
+				
+				    // === FILTRAR: somente pedidos que existem em orders ===
+				    #"Merge" = Table.NestedJoin(#"Add Faixa", {"order_id"}, olist_orders_dataset, {"order_id"}, "Orders", JoinKind.Inner),
+				    #"Remover Coluna Merge" = Table.RemoveColumns(#"Merge", {"Orders"})
+				
 				in
-				    #"Tipo Alterado"
+				    #"Remover Coluna Merge"
+				```
 
 	annotation PBI_NavigationStepName = Navegação
 

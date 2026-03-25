@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "f15e3fb3f8815434b6cf",
+  "position": {
+    "x": 0,
+    "y": 690.64748201438852,
+    "z": 14000,
+    "height": 29.0426120641948,
+    "width": 1280,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Premissas: Pedidos entregues (\"delivered\") | Jan/2017 a Ago/2018 | Receita = valor pago (incl. frete) | Cliente único = customer_unique_id | Fonte: Olist Public Dataset (Kaggle)",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#808080"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
