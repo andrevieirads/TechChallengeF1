@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "f89f919d1bb824b4e4b1",
-  "displayName": "Custom Canva Report (Consolidated)",
+  "displayName": "Custom Canva Report (Consolidated)_Comments",
   "displayOption": "FitToPage",
   "height": 1300,
   "width": 1920,
@@ -30,5 +30,6 @@
         }
       }
     ]
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

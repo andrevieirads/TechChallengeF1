@@ -19,15 +19,24 @@
               {
                 "textRuns": [
                   {
+                    "value": "\t\t"
+                  },
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "color": "#000000"
+                    }
+                  },
+                  {
                     "value": "Recomendações e Insights",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "14pt",
-                      "color": "#808080"
+                      "color": "#000000"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "center"
+                ]
               },
               {
                 "textRuns": [
@@ -52,7 +61,24 @@
                     }
                   },
                   {
-                    "value": "🚚 LOGÍSTICA - Lead time no Norte/NE é 3x maior que SP. Atraso derruba nota de 4.3 para 2.6.",
+                    "value": "🚚 ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "LOGÍSTICA ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "- Lead time no Norte/NE é 3x maior que SP. Atraso derruba nota de 4.3 para 2.6.",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "14pt",
@@ -64,56 +90,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "\t",
-                    "textStyle": {
-                      "color": "#808080"
-                    }
+                    "value": "\t\t\t"
                   },
                   {
-                    "value": "→ CDs regionais e parcerias logísticas locais",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "14pt",
-                      "color": "#808080"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "\t",
-                    "textStyle": {
-                      "color": "#808080"
-                    }
-                  },
-                  {
-                    "value": "⭐ SELLERS - Top 10 sellers concentram grande parte da receita. Sellers ruins derrubam NPS geral.",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "14pt",
-                      "color": "#808080"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "\t",
-                    "textStyle": {
-                      "color": "#808080"
-                    }
-                  },
-                  {
-                    "value": "→ Programa de classificação  e curadoria por qualidade",
+                    "value": "CDs regionais e parcerias logísticas locais",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "14pt",
@@ -138,7 +118,24 @@
                     }
                   },
                   {
-                    "value": "🔄 RETENÇÃO - 97% dos clientes não voltam. Recompra = 2.9%.",
+                    "value": "⭐ ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "SELLERS ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "- Top 10 sellers concentram grande parte da receita. Sellers ruins derrubam NPS geral.",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "14pt",
@@ -156,7 +153,67 @@
                     }
                   },
                   {
-                    "value": "→ Programa de fidelidade e cupons pós-primeira compra",
+                    "value": "\t\t"
+                  },
+                  {
+                    "value": "Programa de classificação  e curadoria por qualidade",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#808080"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "🔄",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": " RETENÇÃO/FIDELIZAÇÃO ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "- 97% dos clientes não voltam. Recompra = 2.9%.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt",
+                      "color": "#808080"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t "
+                  },
+                  {
+                    "value": "Programa de fidelidade e cupons pós-primeira compra",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "14pt",

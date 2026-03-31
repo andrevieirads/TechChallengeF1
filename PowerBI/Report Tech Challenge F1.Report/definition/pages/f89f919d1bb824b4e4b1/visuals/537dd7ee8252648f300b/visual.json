@@ -2,18 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "537dd7ee8252648f300b",
   "position": {
-    "x": 356.66666666666669,
+    "x": 298.88888888888886,
     "y": 1080,
     "z": 20007,
     "height": 202.22222222222223,
-    "width": 574.44444444444446,
+    "width": 644.44444444444446,
     "tabOrder": 20007
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
-        "Group": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -33,22 +33,8 @@
             }
           ]
         },
-        "Values": {
+        "Y": {
           "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Perc_Receita TREEMAP"
-                }
-              },
-              "queryRef": "_Medidas.Perc_Receita TREEMAP",
-              "nativeQueryRef": "Perc_Receita TREEMAP"
-            },
             {
               "field": {
                 "Measure": {
@@ -67,6 +53,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Perc_Receita TREEMAP"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -104,6 +105,37 @@
           }
         }
       ],
+      "layout": [
+        {
+          "properties": {}
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "dataPoint": [
         {
           "properties": {
@@ -111,11 +143,21 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#0047B0'"
                     }
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }
@@ -130,15 +172,15 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "olist_orders_dataset"
+                            "Entity": "product_category_name_translation"
                           }
                         },
-                        "Property": "Atrasado"
+                        "Property": "product_category_name_english"
                       }
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'No Prazo'"
+                        "Value": "'watches_gifts'"
                       }
                     }
                   }
@@ -149,14 +191,10 @@
         },
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B55046'"
-                    }
-                  }
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
                 }
               }
             }
@@ -171,15 +209,15 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "olist_orders_dataset"
+                            "Entity": "product_category_name_translation"
                           }
                         },
-                        "Property": "Atrasado"
+                        "Property": "product_category_name_english"
                       }
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'Atrasado'"
+                        "Value": "'bed_bath_table'"
                       }
                     }
                   }
@@ -187,25 +225,153 @@
               }
             ]
           }
-        }
-      ],
-      "layout": [
+        },
         {
           "properties": {
-            "tilingMethod": {
+            "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "'stableSquarified'"
-                }
-              }
-            },
-            "innerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "45D"
                 }
               }
             }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "product_category_name_translation"
+                          }
+                        },
+                        "Property": "product_category_name_english"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'sports_leisure'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "product_category_name_translation"
+                          }
+                        },
+                        "Property": "product_category_name_english"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'computers_accessories'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "75D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "product_category_name_translation"
+                          }
+                        },
+                        "Property": "product_category_name_english"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'furniture_decor'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "85D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "product_category_name_translation"
+                          }
+                        },
+                        "Property": "product_category_name_english"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'housewares'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]
@@ -415,20 +581,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "3696ac385261fba83e58",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Perc_Receita TREEMAP"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

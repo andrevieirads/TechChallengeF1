@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "6bf134366177eb44d39f",
   "position": {
-    "x": 1467.0212765957447,
-    "y": 271.27659574468089,
+    "x": 1454.4444444444443,
+    "y": 271.11111111111109,
     "z": 16000,
     "height": 200,
-    "width": 453.19148936170217,
+    "width": 465.55555555555554,
     "tabOrder": 16000
   },
   "visual": {
@@ -186,9 +186,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.6
+                    "Literal": {
+                      "Value": "'#1151CA'"
                     }
                   }
                 }
@@ -198,15 +197,10 @@
         },
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0
-                    }
-                  }
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -221,15 +215,15 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "olist_orders_dataset"
+                            "Entity": "product_category_name_translation"
                           }
                         },
-                        "Property": "Atrasado"
+                        "Property": "product_category_name_english"
                       }
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'No Prazo'"
+                        "Value": "'watches_gifts'"
                       }
                     }
                   }
@@ -240,14 +234,10 @@
         },
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B55046'"
-                    }
-                  }
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
                 }
               }
             }
@@ -262,15 +252,89 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "olist_orders_dataset"
+                            "Entity": "product_category_name_translation"
                           }
                         },
-                        "Property": "Atrasado"
+                        "Property": "product_category_name_english"
                       }
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'Atrasado'"
+                        "Value": "'bed_bath_table'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "product_category_name_translation"
+                          }
+                        },
+                        "Property": "product_category_name_english"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'sports_leisure'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "product_category_name_translation"
+                          }
+                        },
+                        "Property": "product_category_name_english"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'computers_accessories'"
                       }
                     }
                   }

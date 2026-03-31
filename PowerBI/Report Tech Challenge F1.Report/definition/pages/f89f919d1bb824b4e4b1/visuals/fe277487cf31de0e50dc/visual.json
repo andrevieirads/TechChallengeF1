@@ -6,7 +6,7 @@
     "y": 271.11111111111109,
     "z": 9000,
     "height": 423.33333333333331,
-    "width": 1394.4444444444443,
+    "width": 1418.8888888888889,
     "tabOrder": 9000
   },
   "visual": {
@@ -251,9 +251,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": -0.5
+                    "Literal": {
+                      "Value": "'#B6CFF7'"
                     }
                   }
                 }
@@ -265,6 +264,32 @@
                   "Value": "0D"
                 }
               }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -274,9 +299,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
+                    "Literal": {
+                      "Value": "'#1151CA'"
                     }
                   }
                 }
