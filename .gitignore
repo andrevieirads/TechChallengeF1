@@ -20,6 +20,7 @@ Thumbs.db
 *.bak
 *.log
 *.cache
+*.gitignore
 
 # Local settings
 .localSettings.json
