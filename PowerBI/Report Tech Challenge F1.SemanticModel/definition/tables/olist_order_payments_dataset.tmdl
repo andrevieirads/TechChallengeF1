@@ -10,9 +10,10 @@ table olist_order_payments_dataset
 		annotation SummarizationSetBy = Automatic
 
 	column payment_sequential
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 2a67399d-b83b-4388-893c-9c36e42c32a9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: payment_sequential
 
 		annotation SummarizationSetBy = Automatic
@@ -50,10 +51,14 @@ table olist_order_payments_dataset
 				let
 				    Fonte = Csv.Document(File.Contents(Pasta&"olist_order_payments_dataset.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Valor Substituído" = Table.ReplaceValue(#"Cabeçalhos Promovidos",".",",",Replacer.ReplaceText,{"payment_value"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"order_id", type text}, {"payment_sequential", type text}, {"payment_type", type text}, {"payment_installments", Int64.Type}, {"payment_value", type number}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"order_id", type text}, {"payment_sequential", Int64.Type}, {"payment_type", type text}, {"payment_installments", Int64.Type}, {"payment_value", type number}}),
+				
+				    // === FILTRAR: somente pedidos que existem em orders ===
+				    #"Merge" = Table.NestedJoin(#"Tipo Alterado", {"order_id"}, olist_orders_dataset, {"order_id"}, "Orders", JoinKind.Inner),
+				    #"Remover Coluna Merge" = Table.RemoveColumns(#"Merge", {"Orders"})
+				
 				in
-				    #"Tipo Alterado"
+				    #"Remover Coluna Merge"
 
 	annotation PBI_NavigationStepName = Navegação
 

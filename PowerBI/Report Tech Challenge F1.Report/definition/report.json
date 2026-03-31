@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.2.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY26SU02",
@@ -7,6 +7,15 @@
         "visual": "2.6.0",
         "report": "3.1.0",
         "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "AccessibleTidal",
+      "reportVersionAtImport": {
+        "visual": "2.7.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
       },
       "type": "SharedResources"
     }
@@ -24,6 +33,19 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "resourcePackages": [
@@ -32,9 +54,50 @@
       "type": "SharedResources",
       "items": [
         {
+          "name": "AccessibleTidal",
+          "path": "BuiltInThemes/AccessibleTidal.json",
+          "type": "CustomTheme"
+        },
+        {
           "name": "CY26SU02",
           "path": "BaseThemes/CY26SU02.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "lifo2677222274401999.png",
+          "path": "lifo2677222274401999.png",
+          "type": "Image"
+        },
+        {
+          "name": "money35002468042954793.png",
+          "path": "money35002468042954793.png",
+          "type": "Image"
+        },
+        {
+          "name": "package5519331348663029.png",
+          "path": "package5519331348663029.png",
+          "type": "Image"
+        },
+        {
+          "name": "price9911583488864659.png",
+          "path": "price9911583488864659.png",
+          "type": "Image"
+        },
+        {
+          "name": "review5022280542024538.png",
+          "path": "review5022280542024538.png",
+          "type": "Image"
+        },
+        {
+          "name": "trade14984684265054926.png",
+          "path": "trade14984684265054926.png",
+          "type": "Image"
         }
       ]
     }

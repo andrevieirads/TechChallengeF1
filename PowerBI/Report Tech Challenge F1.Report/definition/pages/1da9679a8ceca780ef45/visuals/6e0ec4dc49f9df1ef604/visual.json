@@ -1,0 +1,327 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "6e0ec4dc49f9df1ef604",
+  "position": {
+    "x": 540.98113207547169,
+    "y": 0,
+    "z": 1000,
+    "height": 719.69811320754718,
+    "width": 342.94339622641508,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "💾 Sugestão de Commit Message",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "feat: dashboard Power BI completo - Tech Challenge Olist",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dataset: Brazilian E-Commerce Public Dataset by Olist (Kaggle)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Período: Jan/2017 a Ago/2018 | Status: delivered only",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Power Query:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- 9 CSVs carregados via parâmetro Pasta",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- orders: filtros (delivered + período) + colunas calculadas (Lead_Time, Atrasado, Ano_Mes)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- order_items, payments, reviews: filtradas via Merge Inner Join com orders",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- reviews: classificação Faixa_Satisfacao",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- products: nulos de categoria tratados (\"Outros\")",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Modelo:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Star schema, 7 relacionamentos (*:1, single cross-filter)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- geolocation desconectada (MVP)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DAX:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- 26 medidas (tabela _Medidas) organizadas por pilar P1-P5",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- DISTINCTCOUNT para evitar duplicação por joins N:N",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dashboard:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- 7 páginas analíticas + 1 Executive Summary consolidado (canvas 1280x1920)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- KPIs: 96K pedidos | R$ 15.38M GMV | Ticket R$ 159.81 | Review 4.16 | Atraso 8.1% | Recompra 2.9%",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Tese: \"Olist cresceu rápido, mas logística destrói satisfação e impede retenção\"",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Recomendações: CDs regionais, curadoria de sellers, programa de fidelidade",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#161c24"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,414 @@
+table _Medidas
+	lineageTag: 5c1bedd9-6e5a-4964-9580-416639a76d4b
+
+	measure Vol_Pedidos =
+			
+			DISTINCTCOUNT(olist_orders_dataset[order_id])
+		formatString: 0
+		displayFolder: P1 - Crescimento
+		lineageTag: c266c107-ba3c-4909-9b71-411f0168f3fa
+
+	measure Receita_Total =
+			
+			SUMX(
+			    VALUES(olist_order_payments_dataset[order_id]),
+			    CALCULATE(SUM(olist_order_payments_dataset[payment_value]))
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: P1 - Crescimento
+		lineageTag: fc5c8622-b0fd-47fe-9dcb-e64fef77f653
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Ticket_Medio =
+			
+			DIVIDE([Receita_Total], [Vol_Pedidos], 0)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: P1 - Crescimento
+		lineageTag: b186a725-0890-4a3a-b114-0eeec36638ba
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Receita_Produto =
+			
+			SUM(olist_order_items_dataset[price])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: P1 - Crescimento
+		lineageTag: 88fa2c49-0bbe-499c-a8e0-bbf8a4998324
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Frete_Total =
+			
+			SUM(olist_order_items_dataset[freight_value])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: P1 - Crescimento
+		lineageTag: b8b45e18-c39d-42fe-9cdb-0324328fd85a
+
+	measure Perc_Frete = ```
+			
+			DIVIDE([Frete_Total], [Receita_Produto], 0) 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: P1 - Crescimento
+		lineageTag: 36944388-4ab5-4d09-ab22-05d0211f0735
+
+	measure Total_Clientes =
+			
+			DISTINCTCOUNT(olist_customers_dataset[customer_unique_id])
+		formatString: 0
+		displayFolder: P2 - Retenção
+		lineageTag: ebe1c9d2-c88e-40bf-8867-4537afa9f051
+
+	measure Clientes_Recompra =
+			
+			VAR TabelaFreq =
+			    ADDCOLUMNS(
+			        VALUES(olist_customers_dataset[customer_unique_id]),
+			        "Qtd", CALCULATE(DISTINCTCOUNT(olist_orders_dataset[order_id]))
+			    )
+			RETURN
+			    COUNTROWS(FILTER(TabelaFreq, [Qtd] > 1))
+		formatString: 0
+		displayFolder: P2 - Retenção
+		lineageTag: b7a37ed6-94b5-44e2-9c0e-5c7cf0b59fbc
+
+	measure Taxa_Recompra = ```
+			
+			DIVIDE([Clientes_Recompra], [Total_Clientes], 0) 
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: P2 - Retenção
+		lineageTag: 5eca8bef-cad8-43b2-92b0-9c84ba884b62
+
+	measure Frequencia_Media =
+			
+			DIVIDE([Vol_Pedidos], [Total_Clientes], 0)
+		formatString: 0.00
+		displayFolder: P2 - Retenção
+		lineageTag: 775d3182-ce4d-4c40-b58d-71a2a012af44
+
+	measure Lead_Time_Medio =
+			
+			AVERAGEX(
+			    VALUES(olist_orders_dataset[order_id]),
+			    CALCULATE(AVERAGE(olist_orders_dataset[Lead_Time_Dias]))
+			)
+		displayFolder: P3 - Logística
+		lineageTag: 4cc63d93-18aa-42b5-8704-a8f2e813b53e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Pedidos_Atrasados =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_orders_dataset[order_id]),
+			    olist_orders_dataset[Atrasado] = "Atrasado"
+			)
+		formatString: 0
+		displayFolder: P3 - Logística
+		lineageTag: 57d6ce50-b551-4158-a958-002c0805936f
+
+	measure Pedidos_No_Prazo =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_orders_dataset[order_id]),
+			    olist_orders_dataset[Atrasado] = "No Prazo"
+			)
+		formatString: 0
+		displayFolder: P3 - Logística
+		lineageTag: 4a99a107-d8e2-492d-9140-4ffd91414c2d
+
+	measure Taxa_Atraso =
+			
+			DIVIDE([Pedidos_Atrasados], [Vol_Pedidos], 0)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: P3 - Logística
+		lineageTag: 48f73bad-60cd-42d7-b678-415b75cbf9a6
+
+	measure Review_Medio =
+			
+			AVERAGEX(
+			    VALUES(olist_order_reviews_dataset[order_id]),
+			    CALCULATE(AVERAGE(olist_order_reviews_dataset[review_score]))
+			)
+		displayFolder: P3 - Logística
+		lineageTag: e90563b5-16e8-485a-8587-66b1f0241052
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Review_Atrasados =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        VALUES(olist_order_reviews_dataset[order_id]),
+			        CALCULATE(AVERAGE(olist_order_reviews_dataset[review_score]))
+			    ),
+			    olist_orders_dataset[Atrasado] = "Atrasado"
+			)
+		displayFolder: P3 - Logística
+		lineageTag: f0650e48-ed53-4c7e-9038-de393ca2cb31
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Review_No_Prazo =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        VALUES(olist_order_reviews_dataset[order_id]),
+			        CALCULATE(AVERAGE(olist_order_reviews_dataset[review_score]))
+			    ),
+			    olist_orders_dataset[Atrasado] = "No Prazo"
+			)
+		displayFolder: P3 - Logística
+		lineageTag: f8921d6b-a66e-485e-bb97-f98f6c37ca65
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Diferenca_Review =
+			
+			[Review_No_Prazo] - [Review_Atrasados]
+		displayFolder: P3 - Logística
+		lineageTag: 2ab52186-1f17-401c-aa10-16666fcb414f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Receita_SP_RJ =
+			
+			CALCULATE(
+			    [Receita_Total],
+			    olist_customers_dataset[customer_state] IN {"SP", "RJ"}
+			)
+		displayFolder: P4 - Concentração
+		lineageTag: 1a006529-e710-48f1-9e65-f4cd8da950e8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Perc_SP_RJ = ```
+			
+			VAR ReceitaSPRJ = 
+			    CALCULATE(
+			        SUM(olist_order_payments_dataset[payment_value]),
+			        olist_customers_dataset[customer_state] IN {"SP", "RJ"}
+			    )
+			VAR ReceitaTotal = 
+			    CALCULATE(
+			        SUM(olist_order_payments_dataset[payment_value]),
+			        ALL(olist_customers_dataset[customer_state])
+			    )
+			RETURN
+			    DIVIDE(ReceitaSPRJ, ReceitaTotal, 0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: P4 - Concentração
+		lineageTag: 6f15fb34-6405-46b0-a2f6-86d231005efd
+
+	measure Perc_Receita =
+			
+			DIVIDE([Receita_Produto], CALCULATE([Receita_Produto], ALL()), 0)
+		displayFolder: P4 - Concentração
+		lineageTag: 9c7209ec-e518-4353-aa3b-a095ea879a2d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Qtd_Satisfeitos =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_order_reviews_dataset[order_id]),
+			    olist_order_reviews_dataset[Faixa_Satisfacao] = "Satisfeito"
+			)
+		formatString: 0
+		displayFolder: P5 - Satisfação
+		lineageTag: 702210b7-7f93-43f9-8775-97bbf2a9ff4c
+
+	measure Qtd_Neutros =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_order_reviews_dataset[order_id]),
+			    olist_order_reviews_dataset[Faixa_Satisfacao] = "Neutro"
+			)
+		formatString: 0
+		displayFolder: P5 - Satisfação
+		lineageTag: d4328f51-2f56-4411-a21c-50f355e94056
+
+	measure Qtd_Insatisfeitos =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_order_reviews_dataset[order_id]),
+			    olist_order_reviews_dataset[Faixa_Satisfacao] = "Insatisfeito"
+			)
+		formatString: 0
+		displayFolder: P5 - Satisfação
+		lineageTag: 724b8686-5ac3-43f6-ad18-6ef890fe1d3e
+
+	measure Perc_Satisfeitos = ```
+			
+			DIVIDE([Qtd_Satisfeitos], [Vol_Pedidos], 0) 
+			```
+		displayFolder: P5 - Satisfação
+		lineageTag: b9fd3e99-6e45-4607-a633-598a1ed733ff
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Perc_Insatisfeitos =
+			
+			DIVIDE([Qtd_Insatisfeitos], [Vol_Pedidos], 0)
+		displayFolder: P5 - Satisfação
+		lineageTag: c1650e71-45c8-420c-824a-a4fabeaa8657
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Clientes_Sem_Recompra = [Total_Clientes] - [Clientes_Recompra]
+		formatString: 0
+		displayFolder: P2 - Retenção
+		lineageTag: f99d36a8-dcd7-4b92-bee0-096626d9fd8f
+
+	measure Recompra_Resumo =
+			
+			DATATABLE(
+			    "Tipo", STRING,
+			    "Qtd", INTEGER,
+			    {
+			        {"Compra Única", [Clientes_Sem_Recompra]},
+			        {"Recompra (2+)", [Clientes_Recompra]}
+			    }
+			)
+		displayFolder: P2 - Retenção
+		lineageTag: c1043aa2-8e48-432e-b747-16ef65296667
+
+	measure _DEBUG_Total_Linhas_Orders =
+			
+			COUNTROWS(olist_orders_dataset)
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: 5d752821-7c04-4f5f-94ab-b2a300554d53
+
+	measure _DEBUG_Distinct_OrderID =
+			
+			DISTINCTCOUNT(olist_orders_dataset[order_id])
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: fcf86eb6-8218-4e33-a485-9fd3956d30f2
+
+	measure _DEBUG_Ratio =
+			
+			DIVIDE([_DEBUG_Total_Linhas_Orders], [_DEBUG_Distinct_OrderID], 0)
+		displayFolder: DEBUG/TEST
+		lineageTag: 8f53e102-18c2-4677-ac55-d9f6b0ac5010
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure _DEBUG_Linhas_Items =
+			
+			COUNTROWS(olist_order_items_dataset)
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: b43939b4-3744-41a6-8b39-7926871f5038
+
+	measure _TEST_Atrasados =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_orders_dataset[order_id]),
+			    olist_orders_dataset[Atrasado] = "Atrasado"
+			)
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: b76f0174-e071-42f2-879b-f3e3b8d37c4c
+
+	measure _TEST_NoPrazo =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_orders_dataset[order_id]),
+			    olist_orders_dataset[Atrasado] = "No Prazo"
+			)
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: 9165a30c-94c9-4b43-b14b-de4e50ff0578
+
+	measure _TEST_Blanks =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(olist_orders_dataset[order_id]),
+			    ISBLANK(olist_orders_dataset[Atrasado])
+			)
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: 98690e2b-9993-4ef6-b416-8c707d88f5ac
+
+	measure _TEST_Total =
+			
+			[_TEST_Atrasados] + [_TEST_NoPrazo] + [_TEST_Blanks]
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: ca8002b7-82ec-4ca0-bde9-e1c8c22ec645
+
+	measure _TEST_Taxa_Atraso =
+			
+			DIVIDE([_TEST_Atrasados], [_TEST_Atrasados] + [_TEST_NoPrazo], 0) * 100
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: DEBUG/TEST
+		lineageTag: 82ff426b-488d-4341-a781-b3a4ad444f13
+
+	measure _TEST_Recompra =
+			
+			VAR TabelaFreq =
+			    ADDCOLUMNS(
+			        VALUES(olist_customers_dataset[customer_unique_id]),
+			        "Qtd", CALCULATE(DISTINCTCOUNT(olist_orders_dataset[order_id]))
+			    )
+			RETURN
+			    COUNTROWS(FILTER(TabelaFreq, [Qtd] > 1))
+		formatString: 0
+		displayFolder: DEBUG/TEST
+		lineageTag: b1c20d86-0aba-4e8e-b9ed-e2951b0c63ac
+
+	measure _TEST_Taxa_Recompra =
+			
+			DIVIDE([_TEST_Recompra], [Total_Clientes], 0) * 100
+		displayFolder: DEBUG/TEST
+		lineageTag: 4399af2b-c603-474b-98e8-b995d74d8b49
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure _TEST_Perc_SP_RJ = ```
+			
+			VAR ReceitaSPRJ = 
+			    CALCULATE(
+			        SUM(olist_order_payments_dataset[payment_value]),
+			        olist_customers_dataset[customer_state] IN {"SP", "RJ"}
+			    )
+			VAR ReceitaTotal = 
+			    CALCULATE(
+			        SUM(olist_order_payments_dataset[payment_value]),
+			        ALL(olist_customers_dataset[customer_state])
+			    )
+			RETURN
+			    DIVIDE(ReceitaSPRJ, ReceitaTotal, 0) * 100
+			```
+		displayFolder: DEBUG/TEST
+		lineageTag: ea56faf9-14d3-430e-bcaf-e87bdc33874f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Perc_Receita TREEMAP' =
+			
+			DIVIDE([Receita_Produto], CALCULATE([Receita_Produto], ALL()), 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: ecea7bda-67a4-41e5-ab19-e383f04b20fc
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: 18355be5-3e54-4ab4-985a-68464b2952d6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Medidas = calculated
+		mode: import
+		source = {0}
+
+	annotation PBI_Id = 8e7e7ba801e542339df0c52e21ae6746
+

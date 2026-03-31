@@ -1,0 +1,386 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "2fc745e5319e44be4e77",
+  "position": {
+    "x": 903.84615384615381,
+    "y": 0,
+    "z": 2000,
+    "height": 720,
+    "width": 376.15384615384613,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "🔄 PROMPT DE RETOMADA — Cole em nova conversa se perder este chat",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sou Marcelo (Marcelo.Abbade@americantower.com), aluno da Pós-Graduação Data Analytics FIAP (POS TECH), trabalhando no Tech Challenge Fase 1 - Case E-commerce Olist.",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "PROJETO: Relatório executivo para investidores usando dataset Olist (Kaggle) no Power BI.",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "TESE: \"O Olist cresceu rápido, mas a logística é o principal fator que destrói satisfação e impede retenção.\"",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "5 PERGUNTAS:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "P1: Crescimento sustentável? → Receita cresceu 660% mas atingiu platô em 2018",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "P2: Por que cliente não volta? → Recompra = 2.9%",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "P3: Logística destrói valor? → Atraso 8.1%, nota cai de 4.3 para 2.6",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "P4: Concentração de risco? → SP+RJ = 50.75% receita, Top 5 categorias = ~34%",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "P5: Recomendações? → Logística regional, curadoria sellers, programa retenção",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "PREMISSAS:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Somente order_status = 'delivered' | Período: 2017-01 a 2018-08",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Cliente = customer_unique_id | Receita = payment_value",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Geolocation não utilizada | Categorias nulas = \"Outros\"",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- order_items, payments, reviews filtradas via Merge Inner Join com orders",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "KPIs CONFIRMADOS:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "96K pedidos | R$ 15.38M GMV | Ticket R$ 159.81 | Review 4.16 | Atraso 8.1% | Recompra 2.9% | SP+RJ 50.75%",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "O QUE JÁ FOI FEITO:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Power Query: 9 CSVs, filtros, colunas calculadas, Merge Inner Join",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Modelo: star schema, 7 relacionamentos, geolocation desconectada",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- DAX: 26 medidas na tabela _Medidas (P1-P5)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Dashboard: 7 páginas + 1 Executive Summary consolidado (1280x1920)",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Textos de insight em cada seção",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Premissas documentadas",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "ONDE PAREI:",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "[DESCREVA AQUI — ex: \"Finalizando ajustes visuais no Executive Summary\" ou \"Preciso montar o roteiro do vídeo de 5 minutos\"]",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Me ajude a continuar de onde parei.",
+                    "textStyle": {
+                      "fontFamily": "-apple-system, BlinkMacSystemFont, Proxima Nova, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

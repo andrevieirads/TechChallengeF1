@@ -1,7 +1,7 @@
 model Model
 	culture: pt-BR
 	defaultPowerBIDataSourceVersion: powerBI_V3
-	sourceQueryCulture: pt-BR
+	sourceQueryCulture: en-US
 	dataAccessOptions
 		legacyRedirects
 		returnErrorValuesAsNull
@@ -30,6 +30,8 @@ ref table olist_order_reviews_dataset
 ref table LocalDateTable_164bc7b6-adb5-4989-a7ca-8313f5141cfd
 ref table LocalDateTable_14c414e7-40e0-423e-ba68-98be87b0344c
 ref table olist_geolocation_dataset
+ref table LocalDateTable_184d5616-43a2-4467-b988-31450a74264e
+ref table _Medidas
 
 ref cultureInfo pt-BR
 
