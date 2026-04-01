@@ -65,7 +65,7 @@ Construir uma análise exploratória e estratégica do mercado de e-commerce bra
 - 💳 Comportamento de pagamento
 - ⭐ Satisfação do cliente
 
-A partir dessas análises, o projeto busca gerar recomendações de negócio baseadas em dados, apoiando decisões estratégicas para investimento no setor.
+A partir dessas análises, o projeto encontrou gerar recomendações de negócio baseadas em dados, apoiando decisões estratégicas para investimento no setor.
 
 ## 📦 Dataset
 
@@ -173,7 +173,7 @@ O projeto segue as etapas:
 
 ## 📊 Resultados Esperados
 
-O projeto busca gerar insights como:
+o projeto encontrou gerar insights como:
 
 - identificação de categorias e produtos mais rentáveis
 - análise de performance logística
