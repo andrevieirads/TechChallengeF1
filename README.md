@@ -291,8 +291,6 @@ Este repositório faz parte do Tech Challenge da Fase 1 e inclui:
 
 Este projeto tem caráter educacional, utilizando dados públicos disponibilizados pela Olist para fins de aprendizado em análise de dados e tomada de decisão baseada em dados.
 
-
-
 ## 📌 Conclusão
 
 A análise demonstrou que o sucesso em e-commerce não depende apenas de vendas, mas principalmente de:
@@ -302,4 +300,3 @@ A análise demonstrou que o sucesso em e-commerce não depende apenas de vendas,
 - estratégia de produtos
 
 👉 Empresas que investem nesses pilares tendem a ter maior competitividade e retenção de clientes.
-
