@@ -133,6 +133,106 @@ O projeto explora algumas perguntas estratégicas:
 - Quais sellers apresentam melhor desempenho?
 - Onde existem oportunidades de melhoria logística?
 
+## 📊 Análises Realizadas (com interpretação)
+
+### 📈 Crescimento do Marketplace
+
+**O que foi analisado:**
+
+- evolução mensal de pedidos
+- receita total
+- ticket médio
+
+**Interpretação:**
+
+- O crescimento de pedidos indica expansão da base de clientes
+- A receita acompanha esse crescimento, mas o ticket médio mostra estabilidade
+- Isso sugere crescimento baseado em volume, não em valor por cliente
+
+👉 **Insight:** crescimento escalável, mas com potencial de aumento de ticket médio
+
+### 🛍️ Performance de Produtos
+
+**O que foi analisado:**
+
+- categorias mais vendidas
+- categorias com maior faturamento
+
+**Interpretação:**
+
+- Nem sempre as categorias mais vendidas são as mais lucrativas
+- Algumas categorias têm alto volume, mas baixo valor agregado
+
+👉 **Insight:** foco estratégico deve considerar **receita, não apenas volume**
+
+### 🚚 Logística
+
+**O que foi analisado:**
+
+- tempo médio de entrega
+- tempo de processamento do pedido
+- impacto do atraso nas avaliações
+
+**Interpretação:**
+
+- Existe correlação entre atrasos e avaliações negativas
+- Regiões mais distantes apresentam maior tempo de entrega
+
+👉 **Insight:** logística é um dos principais drivers de satisfação
+
+### 💳 Pagamentos
+
+**O que foi analisado:**
+
+- meios de pagamento
+- parcelamento
+
+**Interpretação:**
+
+- Alta utilização de cartão de crédito
+- Parcelamento é um fator relevante no comportamento de compra
+
+👉 **Insight:** estratégias comerciais devem considerar facilidades de pagamento
+
+### ⭐ Satisfação do Cliente
+
+**O que foi analisado:**
+
+- distribuição das avaliações
+- relação com tempo de entrega
+
+**Interpretação:**
+
+- Avaliações positivas estão associadas a entregas rápidas
+- Atrasos impactam diretamente a percepção do cliente
+
+👉 **Insight:** experiência logística define satisfação
+
+
+## 🧠 Principais Insights
+
+- 📈 O marketplace está em crescimento consistente
+- 🚚 A logística é o principal fator de impacto na satisfação
+- 💰 Nem todas as categorias mais vendidas são as mais rentáveis
+- 💳 O parcelamento influencia o comportamento de compra
+
+## 🚀 Recomendações Estratégicas
+
+Com base nas análises, recomendamos:
+
+- **Otimização logística**
+    - reduzir tempo de entrega
+    - melhorar distribuição geográfica
+- **Foco em categorias mais rentáveis**
+    - priorizar produtos com maior margem
+- **Estratégias de aumento de ticket médio**
+    - bundles de produtos
+    - upsell
+- **Melhoria da experiência do cliente**
+    - reduzir atrasos
+    - comunicação mais eficiente
+
+
 ## 🧠 Metodologia de Análise
 
 O projeto segue as etapas:
@@ -155,19 +255,10 @@ O projeto segue as etapas:
 
 ```
 .
-├── Data
-│   ├── raw
-│   └── processed
-│
-├── Notebooks
-│   └── analise_exploratoria.ipynb
-│
-├── PowerBI
-│   └── dashboard_powerbi.pbix
-│
-├── Doc
-│   └── apresentacao.pdf
-│
+├── Data/
+├── Notebooks/
+├── PowerBI/
+├── Doc/
 └── README.md
 ```
 
@@ -179,6 +270,13 @@ o projeto encontrou gerar insights como:
 - análise de performance logística
 - identificação de drivers de satisfação do cliente
 - oportunidades de crescimento e otimização
+
+O projeto permitiu:
+
+- identificar padrões de crescimento
+- entender o impacto da logística
+- mapear oportunidades de otimização
+- apoiar decisões estratégicas
 
 ## 📑 Entregáveis
 
@@ -192,3 +290,16 @@ Este repositório faz parte do Tech Challenge da Fase 1 e inclui:
 # 📌 Observações
 
 Este projeto tem caráter educacional, utilizando dados públicos disponibilizados pela Olist para fins de aprendizado em análise de dados e tomada de decisão baseada em dados.
+
+
+
+## 📌 Conclusão
+
+A análise demonstrou que o sucesso em e-commerce não depende apenas de vendas, mas principalmente de:
+
+- eficiência operacional
+- experiência do cliente
+- estratégia de produtos
+
+👉 Empresas que investem nesses pilares tendem a ter maior competitividade e retenção de clientes.
+
