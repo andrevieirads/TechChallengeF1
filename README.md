@@ -300,3 +300,8 @@ A análise demonstrou que o sucesso em e-commerce não depende apenas de vendas,
 - estratégia de produtos
 
 👉 Empresas que investem nesses pilares tendem a ter maior competitividade e retenção de clientes.
+
+
+## Slid para aprecentar
+
+https://docs.google.com/presentation/d/1M5coNC7rke8da8f7uNwePif7DETP1K-uQbn40sLv5Rc/edit?usp=sharing
